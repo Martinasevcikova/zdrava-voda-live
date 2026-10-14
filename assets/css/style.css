@@ -1250,6 +1250,10 @@ h1.slightly-compact {
   background: rgba(247, 243, 236, 0.15);
 }
 
+.map-facade.is-loaded::before {
+  content: none;
+}
+
 .map-facade-btn {
   position: relative;
   display: flex;

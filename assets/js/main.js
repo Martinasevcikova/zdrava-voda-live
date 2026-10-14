@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Mapa - nacte se az po kliknuti (zadne cookies/skripty od Googlu predem)
+    // Mapa - nacte se az po kliknuti (zadne cookies/skripty predem)
     document.querySelectorAll('.map-facade').forEach(function (el) {
         el.addEventListener('click', function () {
             var mapSrc = el.getAttribute('data-map-src');
@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
             el.innerHTML = '';
             el.style.backgroundImage = 'none';
             el.style.cursor = 'default';
+            el.classList.add('is-loaded');
             el.appendChild(iframe);
         });
     });
