@@ -3,6 +3,10 @@ ErrorDocument 404 /404
 
 RewriteEngine On
 
+# www.chalupazdravavoda.cz -> chalupazdravavoda.cz (jedna hlavni adresa)
+RewriteCond %{HTTP_HOST} ^www\.chalupazdravavoda\.cz$ [NC]
+RewriteRule ^(.*)$ https://chalupazdravavoda.cz/$1 [L,R=301]
+
 # index.html -> koren domeny
 RewriteCond %{THE_REQUEST} /index\.html[\s?] [NC]
 RewriteRule ^index\.html$ / [R=301,L]
